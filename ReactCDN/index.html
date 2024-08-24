@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .footer{
+            color:purple;
+            border:20px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="root">
+        Not Rendering
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script type = "text/babel">
+
+        const rootElement = document.querySelector(".root");
+
+        const Header = (
+        <header style={{border: "2px  solid black", color:"red"}}>
+            <h1> Hello Krishna </h1>
+        </header>);  
+
+        const cssmain = {border:"2px solid black", color:"blue"}
+
+        const Main = (
+        <main style={cssmain}>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam exercitationem obcaecati nemo dolore itaque quidem?</p>
+        </main>
+        );
+
+        const Footer = (
+        <footer className = "footer">
+            <p>End of the website</p>
+        </footer>
+        );
+
+        // components -- header, main, footer
+        const App = (
+            <>
+            {Header}
+            {Main}
+            {Main} 
+            {Main}
+            {Footer}
+            </>
+        );
+
+        ReactDOM.render(App,rootElement)
+
+    </script>
+</body>
+</html>
