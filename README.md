@@ -122,3 +122,20 @@ With React Router, you can specify the different routes in your application and 
 
 <Outlet/> placeholder
 
+In index.js file
+ import {createBrowserRouter, RouterProvider } from
+   'react-router-dom'
+
+ const appRouter = createBrowserRouter([
+     {
+path:"/",
+       element:<App/>,
+      },
+     {
+       path:"/about",
+       element:<About/>,
+}, {
+       path:"/contact",
+       element:<Contact/>,
+     },
+])
